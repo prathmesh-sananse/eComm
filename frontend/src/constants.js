@@ -1,5 +1,7 @@
 export const BASE_URL =
-  process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : '';
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:5000' // for local testing
+    : 'https://your-backend-name.onrender.com'; // for Vercel (production)
 //export const BASE_URL = ''; // If using proxy
 export const PRODUCTS_URL = '/api/products';
 export const USERS_URL = '/api/users';
