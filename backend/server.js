@@ -19,7 +19,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ['https://ecomm-frontend-2ew.vercel.app'],
+    origin: ['https://e-comm-ftend.vercel.app'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
   })
