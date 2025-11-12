@@ -17,13 +17,16 @@ connectDB();
 
 const app = express();
 
+const FRONTEND_URL = process.env.FRONTEND_URL; // dynamically read from env
+
 app.use(
   cors({
-    origin: ['https://e-comm-ftend.vercel.app'],
+    origin: FRONTEND_URL ? [FRONTEND_URL] : '*', // allow all if not set (optional)
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
   })
 );
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
